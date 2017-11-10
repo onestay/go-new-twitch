@@ -11,7 +11,7 @@ There are still a lot of endpoints added to the API and they might not immediate
 Create a new Twitch Application [here](https://dev.twitch.tv/dashboard/apps) to get a client id.
 You can then create a new twitch client with the ```NewClient``` method and start using all the methods.
 
-Documentation can be found here 
+Documentation can be found here https://godoc.org/github.com/Onestay/go-new-twitch and the oficiall New Twich API reference here https://dev.twitch.tv/docs/api/reference
 
 
 ## Example
@@ -19,7 +19,7 @@ Documentation can be found here
 package main
 import (
 	"fmt"
-    twitch "github.com/Onestay/go-new-twitch"
+	twitch "github.com/Onestay/go-new-twitch"
 )
 
 func main() {
