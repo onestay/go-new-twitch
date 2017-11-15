@@ -4,7 +4,6 @@ import (
 	"encoding/json"
 	"errors"
 	"io/ioutil"
-	"net/http"
 	"net/url"
 )
 
@@ -57,14 +56,7 @@ func (c Client) getUsers(names []string, meth string) ([]UserData, error) {
 
 	uri.RawQuery = p.Encode()
 
-	r, err := http.NewRequest("GET", uri.String(), nil)
-	if err != nil {
-		return nil, err
-	}
-
-	r.Header.Add("Client-ID", c.ClientID)
-
-	res, err := c.httpClient.Do(r)
+	res, err := c.doRequest("GET", uri.String(), nil)
 	if err != nil {
 		return nil, err
 	}

@@ -8,17 +8,17 @@ import (
 )
 
 var clientID string
+var client *twitch.Client
 
 func init() {
 	clientID = os.Getenv("CLIENT_ID")
+	client = twitch.NewClient(clientID)
 }
 
 func TestGetUsers(t *testing.T) {
-	client := twitch.NewClient(clientID)
-
 	u, err := client.GetUsersByLogin("lirik")
 	if err != nil {
-		t.Errorf("An error occured while getting the twitch user %v", err)
+		t.Errorf("An error occured while getting the twitch user: %v", err)
 	} else if len(u) < 0 {
 		t.Error("Expected one user to be returned")
 	} else if u[0].Login != "lirik" {
