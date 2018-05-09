@@ -17,7 +17,6 @@ func parseURLQuery(i interface{}) url.Values {
 	for key, value := range q {
 		for i := 0; i < len(value); i++ {
 			if !isZero(value[i]) {
-				fmt.Printf("key: %v value: %v, isZero: %v\n", key, value[i], isZero(value[i]))
 				v.Add(key, value[i])
 			}
 		}
