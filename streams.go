@@ -2,7 +2,6 @@ package twitch
 
 import (
 	"encoding/json"
-	"fmt"
 	"io/ioutil"
 	"net/url"
 	"time"
@@ -65,7 +64,6 @@ func (c Client) GetStreams(i GetStreamsInput) ([]StreamData, error) {
 	}
 
 	uri.RawQuery = parseURLQuery(i).Encode()
-	fmt.Println(uri.String())
 	res, err := c.doRequest("GET", uri.String(), nil)
 	if err != nil {
 		return nil, err
@@ -80,6 +78,5 @@ func (c Client) GetStreams(i GetStreamsInput) ([]StreamData, error) {
 	}
 
 	json.Unmarshal(body, &s)
-	fmt.Println(s)
 	return s.Data, nil
 }
