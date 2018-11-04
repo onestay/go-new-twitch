@@ -7,7 +7,7 @@ import (
 )
 
 func TestStreams(t *testing.T) {
-	client := twitch.NewClient("yyq2my6770x5tx6z9shlyjjimm0u1l")
+	client := twitch.NewClient("")
 
 	s, err := client.GetStreams(twitch.GetStreamInput{
 		GameID: "33214",
