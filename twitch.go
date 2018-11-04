@@ -2,18 +2,21 @@ package twitch
 
 import (
 	"net/http"
+	"time"
 )
 
-// Client represents a client to interact with the twitch API
+// Client represents the base client to interact with the twitch api
 type Client struct {
-	ClientID   string
-	httpClient *http.Client
+	httpClient http.Client
+	clientID   string
 }
 
-// NewClient will initialize a new client for the twitch api
-func NewClient(cid string) *Client {
+// NewClient initiates a new client to use with the twitch api
+func NewClient(id string) *Client {
 	return &Client{
-		ClientID:   cid,
-		httpClient: &http.Client{},
+		httpClient: http.Client{
+			Timeout: time.Second * 20,
+		},
+		clientID: id,
 	}
 }
