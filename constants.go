@@ -9,4 +9,5 @@ const (
 	getFollowsEndpoint         = "/follows"
 	updateUserEndpoint         = "/users"
 	getVideosEndpoint          = "/videos"
+	getClipsEndpoint           = "/clips"
 )

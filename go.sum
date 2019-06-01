@@ -1,0 +1,4 @@
+github.com/google/go-querystring v1.0.0 h1:Xkwi/a1rcvNg1PPYe5vI8GbeBY/jrVuDX5ASuANWTrk=
+github.com/google/go-querystring v1.0.0/go.mod h1:odCYkC5MyYFN7vkCjXpyrEuKhc/BUO6wN/zVPAxq5ck=
+github.com/onestay/go-new-twitch v0.0.0-20181103093029-31b40da4c4dd h1:W6kUdZSoGLzCr5hHN/uE23x+D/TKyZsYL3iyMf8RIm4=
+github.com/onestay/go-new-twitch v0.0.0-20181103093029-31b40da4c4dd/go.mod h1:wF+dKYjsO+dcU7KsrRtokKGBdNVagUC0VyPvOeVfu6Q=
