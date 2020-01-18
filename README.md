@@ -1,5 +1,6 @@
 # go-new-twitch
 
+# it's working but you should probably use https://github.com/nicklaw5/helix since this is not that well maintained
 ## Description
 I decided to write this api wrapper because there were none for the New Twitch Api and all the other ones are fairly outdated. 
 
